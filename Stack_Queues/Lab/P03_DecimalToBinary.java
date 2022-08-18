@@ -9,12 +9,15 @@ public class P03_DecimalToBinary {
 
         int number = Integer.parseInt(scanner.nextLine());
         ArrayDeque<Integer> binaryNum = new ArrayDeque<>();
+        if (number == 0) {
+            System.out.println(0);
+        } else {
+            while (number != 0) {
+                int leftOver = number % 2;
+                binaryNum.push(leftOver);
+                number = number / 2;
 
-        while (number!=0){
-            int leftOver = number%2;
-            binaryNum.push(leftOver);
-            number = number / 2;
-
+            }
         }
         for (Integer integer : binaryNum) {
             System.out.print(integer);
