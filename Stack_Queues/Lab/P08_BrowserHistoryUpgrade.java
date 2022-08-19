@@ -11,9 +11,6 @@ public class P08_BrowserHistoryUpgrade {
         ArrayDeque<String> stack = new ArrayDeque<>();
         ArrayDeque<String> queue = new ArrayDeque<>();
 
-
-
-
         while (!input.equals("Home")){
                 switch (input){
 
@@ -23,7 +20,6 @@ public class P08_BrowserHistoryUpgrade {
                         }else {
                             queue.addFirst(stack.poll());
                             System.out.println(stack.peek());
-
 
                         }
 
