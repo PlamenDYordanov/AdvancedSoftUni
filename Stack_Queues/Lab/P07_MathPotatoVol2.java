@@ -1,9 +1,12 @@
 package Advanced.Stack_Queues.Lab;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class P06_HotPotato {
+public class P07_MathPotatoVol2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -60,17 +63,16 @@ public class P06_HotPotato {
     }
 
     public static boolean isPrime(int n) {
-        if (n == 4) {
+        if (n <=1){
             return false;
         }
-        if (n <= 1) {
-            return false;
-        }
-        for (int i = 2; i < Math.sqrt(n); i++) {
+        for (int i = 2; i <= n / 2; ++i) {
             if (n % i == 0) {
+
                 return false;
             }
         }
+
         return true;
     }
 }
