@@ -14,11 +14,13 @@ public class P08_InfixToPostfix {
 
         for (String s : input) {
             char symbol = s.charAt(0);
-
+            //if digit - offer
             if (Character.isDigit(symbol)) {
                 queue.offer(s);
+                //if alphabet  - offer
             } else if (symbol >= 65 && symbol <= 90 || symbol>= 97 && symbol <=122) {
                 queue.offer(s);
+                //check precedence of symbols
             } else if (symbol == '+' || symbol == '-' || symbol == '*' || symbol == '/') {
                 if (stack.isEmpty()) {
                     stack.push(s);
@@ -27,6 +29,7 @@ public class P08_InfixToPostfix {
                     stack.push(getInformationAfterSymbol(symbol, s, stack, queue));
 
                 }
+                //bracket rule
             } else if (symbol == '(' || symbol == ')') {
                 stack.push(s);
                 if (symbol == '(' && stack.contains(")")) {
