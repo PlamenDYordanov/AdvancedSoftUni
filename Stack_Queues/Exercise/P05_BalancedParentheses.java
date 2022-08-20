@@ -12,7 +12,7 @@ public class P05_BalancedParentheses {
         ArrayDeque<Character> brackets = new ArrayDeque<>();
 
         boolean isBalanced = true;
-        
+
         if (input.length() % 2 != 0) {
             isBalanced = false;
         } else {
