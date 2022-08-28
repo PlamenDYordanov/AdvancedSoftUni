@@ -21,21 +21,19 @@ public class P11_ReverseMatrixDiagonals {
         }
         for (int col = cols - 1; col >= 0; col--) {
             int printRow = rows;
-            for (int printCol = col; printCol <= cols - 1&&printRow>0; printCol++) {
+            for (int printCol = col; printCol <= cols - 1 && printRow > 0; printCol++) {
 
-                if (printRow > 0) {
-                    System.out.print(matrix[printRow - 1][printCol] + " ");
-                    printRow--;
-                }
+                System.out.print(matrix[printRow - 1][printCol] + " ");
+                printRow--;
             }
             System.out.println();
         }
 
 
-        if(rows >= 2) {
+        if (rows >= 2) {
             for (int row = rows - 2; row >= 0; row--) {
                 int printRow = row;
-                for (int col = 0; col <= row&&col<cols; col++) {
+                for (int col = 0; col <= row && col < cols; col++) {
                     System.out.print(matrix[printRow][col] + " ");
                     printRow--;
                 }
