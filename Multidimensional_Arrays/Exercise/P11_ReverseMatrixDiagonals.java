@@ -1,0 +1,46 @@
+package Advanced.Multidimensional_Arrays.Exercise;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class P11_ReverseMatrixDiagonals {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String[] dimensions = scanner.nextLine().split("\\s+");
+
+        int rows = Integer.parseInt(dimensions[0]);
+        int cols = Integer.parseInt(dimensions[1]);
+
+        int[][] matrix = new int[rows][];
+        for (int row = 0; row < rows; row++) {
+            int[] arr = Arrays.stream(scanner.nextLine().split("\\s+"))
+                    .mapToInt(Integer::parseInt)
+                    .toArray();
+
+            matrix[row] = arr;
+        }
+        for (int col = cols - 1; col >= 0; col--) {
+            int printRow = rows;
+            for (int printCol = col; printCol <= cols - 1&&printRow>0; printCol++) {
+
+                if (printRow > 0) {
+                    System.out.print(matrix[printRow - 1][printCol] + " ");
+                    printRow--;
+                }
+            }
+            System.out.println();
+        }
+
+
+        if(rows >= 2) {
+            for (int row = rows - 2; row >= 0; row--) {
+                int printRow = row;
+                for (int col = 0; col <= row&&col<cols; col++) {
+                    System.out.print(matrix[printRow][col] + " ");
+                    printRow--;
+                }
+                System.out.println();
+            }
+        }
+    }
+}

@@ -3,6 +3,8 @@ package Advanced.Multidimensional_Arrays.Exercise;
 import java.util.Scanner;
 
 public class P08_HeiganDance {
+
+    //You have to use boolean[][] !!!!! And you have to implement 3x3 hit zone with true
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
