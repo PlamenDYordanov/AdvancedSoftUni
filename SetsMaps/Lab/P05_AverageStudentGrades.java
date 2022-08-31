@@ -15,7 +15,7 @@ public class P05_AverageStudentGrades {
 
             String name = inputLine[0];
             double grade = Double.parseDouble(inputLine[1]);
-
+            //fill map
             if (!mapOfStudents.containsKey(name)) {
                 mapOfStudents.put(name, new ArrayList<>());
                 mapOfStudents.get(name).add(grade);
@@ -23,6 +23,7 @@ public class P05_AverageStudentGrades {
                 mapOfStudents.get(name).add(grade);
             }
         }
+        //This solution give me 90/100;
      /*   for (Map.Entry<String, List<Double>> entry : mapOfStudents.entrySet()) {
             double averageGrades = entry.getValue().stream().mapToDouble(x ->x).average().getAsDouble();
             System.out.printf("%s -> ",entry.getKey());
