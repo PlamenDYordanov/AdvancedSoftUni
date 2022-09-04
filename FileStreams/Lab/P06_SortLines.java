@@ -28,8 +28,8 @@ public class P06_SortLines {
             for (int i = 0; i < listOfLines.size(); i++) {
                 String currentLine = listOfLines.get(i);
                 printWriter.println(currentLine);
-                printWriter.flush();
             }
+            printWriter.close();
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
