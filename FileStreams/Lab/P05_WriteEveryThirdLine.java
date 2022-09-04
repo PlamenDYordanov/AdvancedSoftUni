@@ -8,10 +8,10 @@ public class P05_WriteEveryThirdLine {
 
         String path = "E:\\Advanced_SoftUni\\src\\Advanced\\FileStreams\\Resources\\04. Java-Advanced-Files-and-Streams-Lab-Resources\\input.txt";
         String output = "E:\\Advanced_SoftUni\\src\\Advanced\\FileStreams\\Resources\\04. Java-Advanced-Files-and-Streams-Lab-Resources\\05.WriteEveryThirdLineOutput.txt";
-        Scanner reader = new Scanner(new FileReader(path));
+        Scanner reader = new Scanner(new FileInputStream(path));
         PrintWriter printWriter = null;
         try {
-            printWriter = new PrintWriter(new FileWriter(output));
+            printWriter = new PrintWriter(new FileOutputStream(output));
             int counter = 1;
             String line = reader.nextLine();
 
