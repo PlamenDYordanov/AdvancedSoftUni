@@ -12,7 +12,7 @@ public class P07_ListFiles {
                 File[] files = file.listFiles();
                 for (File f : files) {
                     if (!f.isDirectory()){
-                      
+
                         System.out.printf("%s: [%s]%n", f.getName(), f.length());
                     }
                 }
