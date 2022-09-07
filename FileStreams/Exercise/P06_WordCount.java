@@ -20,10 +20,13 @@ public class P06_WordCount {
             Map<String, Integer> mapOfWords = new LinkedHashMap<>();
             PrintWriter printWriter = new PrintWriter(new FileOutputStream(String.valueOf(resultOutput)));
             String[] words = String.valueOf(Files.readAllLines(path)).replaceAll("[\\[\\]]","").split(" ");
+
             for (int i = 0; i < words.length; i++) {
                 mapOfWords.put(words[i],0);
             }
+
             Scanner reader = new Scanner( new FileInputStream(String.valueOf(compare)));
+
             String word = reader.next();
             while (reader.hasNext()){
                 if (mapOfWords.containsKey(word)){
