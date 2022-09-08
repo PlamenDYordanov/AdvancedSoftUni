@@ -11,22 +11,20 @@ public class demo {
 
         List<String> participants = Arrays.stream(scanner.nextLine().split(" ")).collect(Collectors.toList());
 
-        int count = Integer.parseInt(scanner.nextLine());
+        int passes = Integer.parseInt(scanner.nextLine());
         int index = 0;
         while (participants.size() > 1) {
 
-            for (int i = 0; i < count; i++) {
+            for (int i = 1; i < passes; i++) {
+                index++;
                 if (index == participants.size()) {
                     index = 0;
                 }
-                index++;
 
             }
-            System.out.println(participants.remove(index - 1));
-            if (index > participants.size()) {
+            System.out.println(participants.remove(index));
+            if (index == participants.size()) {
                 index = 0;
-            } else {
-                index--;
             }
         }
     }
