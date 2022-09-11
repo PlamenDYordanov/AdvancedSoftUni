@@ -12,14 +12,20 @@ public class P03_CustomMinFunction {
         Scanner scanner = new Scanner(System.in);
 
 
-
-
-
         int[] numbers = Arrays.stream(scanner.nextLine().split("\\s+"))
                 .mapToInt(Integer::parseInt)
-               .toArray();
-        Function<int[], Integer> getMinNum = array -> Arrays.stream(array).map(x->x).min().getAsInt();
+                .toArray();
+        Function<int[], Integer> getMinNum = array -> Arrays.stream(array).map(x -> x).min().getAsInt();
+        Function<int[], Integer> getMin = integers -> {
+            int min = Integer.MAX_VALUE;
+            for (Integer integer : integers) {
+                if (integer < min){
+                    min = integer;
+                }
+            }
+            return min;
+        };
 
-        System.out.println(getMinNum.apply(numbers));
+        System.out.println(getMin.apply(numbers));
     }
 }
