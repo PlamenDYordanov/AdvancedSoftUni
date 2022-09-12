@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.function.BiFunction;
+import java.util.function.BiPredicate;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -19,33 +20,31 @@ public class P09_ListOfPredicate {
         for (int i = 1; i <= n; i++) {
             number.add(i);
         }
-        List<Integer> DivisibleNumbers = Arrays.stream(scanner.nextLine().split("\\s+"))
+        List<Integer> divisibleNumbers = Arrays.stream(scanner.nextLine().split("\\s+"))
                 .map(e -> Integer.parseInt(e))
                 .collect(Collectors.toList());
 
-        BiFunction<List<Integer>, List<Integer>, List<Integer>> func = (list, divisible) -> {
+        BiPredicate<Integer,List<Integer>> filter = (integer, divisible) -> {
 
-            for (int i = 0; i < list.size(); i++) {
-                int currentNum = list.get(i);
-                int index = list.indexOf(currentNum);
 
-                for (Integer divisibleNum : divisible) {
-                    if (currentNum % divisibleNum != 0) {
-                        list.remove(index);
-                        i--;
-                        break;
+                for (Integer divisibleNumber : divisible) {
+                    if (integer%divisibleNumber !=0){
+                        return false;
                     }
                 }
-            }
-            return list;
+                return true;
+
         };
-
-
-        number = func.apply(number, DivisibleNumbers);
-        for (Integer integer : number) {
-            System.out.print(integer + " ");
+       List<Integer> listNumber = number.stream()
+                .filter(integer -> filter.test(integer,divisibleNumbers)).collect(Collectors.toList());
+        for (Integer integer : listNumber) {
+            System.out.print(integer+" ");
         }
 
 
     }
 }
+
+
+
+
