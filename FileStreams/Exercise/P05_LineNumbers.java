@@ -11,8 +11,8 @@ public class P05_LineNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Path path = Paths.get("E:\\Advanced_SoftUni\\src\\Advanced\\FileStreams\\ExR\\Exercises Resources\\inputLineNumbers.txt");
-        Path output = Paths.get("E:\\Advanced_SoftUni\\src\\Advanced\\FileStreams\\ExR\\Exercises Resources\\output.txt");
+        Path path = Paths.get("E:\\Advanced_SoftUni\\src\\Advanced\\FileStreams\\ExR\\04. Java-Advanced-Files-and-Streams-Exercises-Resources\\Exercises Resources\\inputLineNumbers.txt");
+        Path output = Paths.get("E:\\Advanced_SoftUni\\src\\Advanced\\FileStreams\\ExR\\04. Java-Advanced-Files-and-Streams-Exercises-Resources\\Exercises Resources\\output.txt");
 
         try {
             Scanner reader = new Scanner(new FileInputStream(String.valueOf(path)));

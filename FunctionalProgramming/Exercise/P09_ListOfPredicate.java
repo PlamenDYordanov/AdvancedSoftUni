@@ -24,21 +24,19 @@ public class P09_ListOfPredicate {
                 .map(e -> Integer.parseInt(e))
                 .collect(Collectors.toList());
 
-        BiPredicate<Integer,List<Integer>> filter = (integer, divisible) -> {
-
-
-                for (Integer divisibleNumber : divisible) {
-                    if (integer%divisibleNumber !=0){
-                        return false;
-                    }
+        BiPredicate<Integer, List<Integer>> filter = (integer, divisible) -> {
+            for (Integer divisibleNumber : divisible) {
+                if (integer % divisibleNumber != 0) {
+                    return false;
                 }
-                return true;
-
+            }
+            return true;
         };
-       List<Integer> listNumber = number.stream()
-                .filter(integer -> filter.test(integer,divisibleNumbers)).collect(Collectors.toList());
+
+        List<Integer> listNumber = number.stream()
+                .filter(integer -> filter.test(integer, divisibleNumbers)).collect(Collectors.toList());
         for (Integer integer : listNumber) {
-            System.out.print(integer+" ");
+            System.out.print(integer + " ");
         }
 
 

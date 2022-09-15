@@ -12,8 +12,8 @@ import java.util.Set;
 public class P04_CountCharacterTypes {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
-        Path path = Paths.get("E:\\Advanced_SoftUni\\src\\Advanced\\FileStreams\\ExR\\Exercises Resources\\input.txt");
-        Path outPut = Paths.get("E:\\Advanced_SoftUni\\src\\Advanced\\FileStreams\\ExR\\Exercises Resources\\output.txt");
+        Path path = Paths.get("E:\\Advanced_SoftUni\\src\\Advanced\\FileStreams\\ExR\\04. Java-Advanced-Files-and-Streams-Exercises-Resources\\input.txt");
+        Path outPut = Paths.get("E:\\Advanced_SoftUni\\src\\Advanced\\FileStreams\\ExR\\04. Java-Advanced-Files-and-Streams-Exercises-Resources\\Exercises Resources\\output.txt");
 
         Scanner reader = new Scanner(new FileInputStream(String.valueOf(path)));
         List<String> line = Files.readAllLines(path);
