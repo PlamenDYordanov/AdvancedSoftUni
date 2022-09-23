@@ -68,6 +68,7 @@ public class Main {
         inputLine = scanner.nextLine();
         String searchPerson = inputLine;
         Person personalData =  personMap.get(searchPerson);
+        System.out.println(searchPerson);
         System.out.println(personalData);
 
     }
