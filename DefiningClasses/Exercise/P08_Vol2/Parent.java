@@ -7,12 +7,10 @@ public class Parent {
 
 
     public Parent() {
-
         this.parentSet = new ArrayList<>();
     }
 
-
-    public void addToSet(String parent){
+    public void addToParentList(String parent) {
         this.parentSet.add(parent);
     }
 

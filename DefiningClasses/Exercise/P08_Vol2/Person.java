@@ -48,13 +48,13 @@ public class Person {
 
     }
 
-    public void getParents(List<String> childrenList, List<String> parentList){
+    public void getParents(List<String> childrenList, List<String> parentList) {
         int index = 0;
         for (String currentChild : childrenList) {
-            if (currentChild.equals(this.name)||currentChild.equals(this.birthday)){
-             this.parentList.add(parentList.get(index));
+            if (currentChild.equals(this.name) || currentChild.equals(this.birthday)) {
+                this.parentList.add(parentList.get(index));
             }
-            index ++;
+            index++;
         }
 
        /* for (String currentParentParameter : parent) {
@@ -75,19 +75,17 @@ public class Person {
                 }
 
             }*/
-        }
-
-
+    }
 
 
     public void getChildrenSet(List<String> childList, List<String> parentList) {
 
         int index = 0;
         for (String currentParent : parentList) {
-            if (currentParent.equals(this.name)||currentParent.equals(this.birthday)){
+            if (currentParent.equals(this.name) || currentParent.equals(this.birthday)) {
                 this.childrenList.add(childList.get(index));
             }
-            index ++;
+            index++;
         }
        /* for (String currentChildParameter : childSet) {
 
@@ -107,7 +105,7 @@ public class Person {
                 }
 
             }*/
-        }
+    }
 
 
     public String getName() {
