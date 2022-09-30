@@ -3,6 +3,7 @@ package Advanced.IteratorComparator.Exercise.P02_Collection;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -31,6 +32,10 @@ public class Main {
                     }else {
                         System.out.println("false");
                     }
+                    break;
+                case "PrintAll":
+                    listyIterator.forEach(print -> System.out.print(print + " "));
+                    System.out.println();
                     break;
 
             }

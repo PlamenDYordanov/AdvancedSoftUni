@@ -3,6 +3,7 @@ package Advanced.IteratorComparator.Exercise.P02_Collection;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class ListyIterator implements Iterable<String> {
 
@@ -38,6 +39,11 @@ public class ListyIterator implements Iterable<String> {
                 }
             }
         };
+    }
+
+    @Override
+    public void forEach(Consumer<? super String> action) {
+        list.forEach(action::accept);
     }
 
     public void PrintElement() {
