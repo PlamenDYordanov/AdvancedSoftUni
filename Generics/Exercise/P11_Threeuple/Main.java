@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Tuple tuple = new Tuple();
+        tuple tuple = new tuple();
 
 
         String firstInput = scanner.nextLine();

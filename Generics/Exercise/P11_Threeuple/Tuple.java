@@ -3,13 +3,13 @@ package Generics.Exercise.P11_Threeuple;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Tuple<T> {
+public class tuple<T> {
 
     private List<T> itemOne;
     private List<T> itemTwo;
     private List<T> itemThree;
 
-    public Tuple() {
+    public tuple() {
         this.itemOne = new ArrayList<>();
         this.itemTwo = new ArrayList<>();
         this.itemThree = new ArrayList<>();
