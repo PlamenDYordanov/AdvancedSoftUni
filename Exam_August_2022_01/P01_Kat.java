@@ -1,4 +1,4 @@
-package Advanced.Exam_August2022_01;
+package Advanced.Exam_August_2022_01;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
