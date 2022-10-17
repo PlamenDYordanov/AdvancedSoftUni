@@ -9,10 +9,10 @@ public class P02_Bee {
     private static boolean isInBounds = true;
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         int dimension = Integer.parseInt(scanner.nextLine());
-
         char[][] field = new char[dimension][dimension];
 
         for (int row = 0; row < dimension; row++) {
@@ -40,11 +40,9 @@ public class P02_Bee {
                     moveBee(field, 0, +1);
                     break;
             }
-
             if (!isInBounds) {
                 break;
             }
-
             command = scanner.nextLine();
         }
         if (!isInBounds) {
@@ -55,9 +53,7 @@ public class P02_Bee {
         } else {
             System.out.printf("The bee couldn't pollinate the flowers, she needed %d flowers more%n", 5 - pollinateFlower);
         }
-
         printField(field);
-
     }
 
     private static void printField(char[][] field) {
@@ -69,7 +65,6 @@ public class P02_Bee {
             System.out.println();
         }
     }
-
     private static void moveBee(char[][] field, int rowMutator, int colMutator) {
         boolean isBonus = false;
         int nextRow = beeRow + rowMutator;
@@ -96,7 +91,6 @@ public class P02_Bee {
 
 
     }
-
     private static boolean isInField(char[][] field, int nextRow, int nextCol) {
         return nextRow >= 0 && nextRow < field.length && nextCol >= 0 && nextCol < field[nextRow].length;
     }
