@@ -1,4 +1,4 @@
-package Advanced.Exam_October_2022_05.vetClinic;
+package Advanced.ExamPreparation_2022_05.vetClinic;
 
 import java.util.ArrayList;
 import java.util.List;

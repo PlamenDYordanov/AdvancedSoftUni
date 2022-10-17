@@ -1,4 +1,4 @@
-package Advanced.Exam_October_2022_06.bakery;
+package Advanced.ExamPreparation_2022_06.bakery;
 
 public class Main {
     public static void main(String[] args) {

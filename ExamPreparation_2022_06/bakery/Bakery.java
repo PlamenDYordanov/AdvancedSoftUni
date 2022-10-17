@@ -1,4 +1,4 @@
-package Advanced.Exam_October_2022_06.bakery;
+package Advanced.ExamPreparation_2022_06.bakery;
 
 import java.util.ArrayList;
 import java.util.List;
