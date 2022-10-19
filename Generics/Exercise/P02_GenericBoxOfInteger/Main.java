@@ -1,4 +1,4 @@
-package Generics.Exercise.P02_GenericBoxOfInteger;
+package Generics;
 
 import java.util.Scanner;
 

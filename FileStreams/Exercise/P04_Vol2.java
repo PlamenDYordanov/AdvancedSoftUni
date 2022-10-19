@@ -14,8 +14,8 @@ public class P04_Vol2 {
 
 
         Scanner scanner = new Scanner(System.in);
-        Path path = Paths.get("E:\\Advanced_SoftUni\\src\\Advanced\\FileStreams\\ExR\\Exercises Resources\\input.txt");
-        Path outPut = Paths.get("E:\\Advanced_SoftUni\\src\\Advanced\\FileStreams\\ExR\\Exercises Resources\\output.txt");
+        Path path = Paths.get("E:\\Advanced_SoftUni\\src\\Advanced\\FileStreams\\ExR\\04. Java-Advanced-Files-and-Streams-Exercises-Resources\\input.txt");
+        Path outPut = Paths.get("E:\\Advanced_SoftUni\\src\\Advanced\\FileStreams\\ExR\\04. Java-Advanced-Files-and-Streams-Exercises-Resources\\Exercises Resources\\output.txt");
         Set<Character> vowelsSet = getVowels();
         Set<Character> punctuationSet = getPunctuation();
         Scanner reader;
@@ -65,7 +65,7 @@ public class P04_Vol2 {
             try {
                 printWriter = new PrintWriter(new FileOutputStream(String.valueOf(outPut)));
                 printWriter.printf("Vowels: %d%n", vowels);
-                printWriter.printf("Consonants: %d%n", consonants);
+                printWriter.printf("Other symbols: %d%n", consonants);
                 printWriter.printf("Punctuation: %d%n", punctuation);
                 printWriter.close();
             } catch (FileNotFoundException e) {

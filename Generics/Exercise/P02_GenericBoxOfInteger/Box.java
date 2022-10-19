@@ -1,4 +1,4 @@
-package Generics.Exercise.P02_GenericBoxOfInteger;
+package Generics;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class Box<T> {
         StringBuilder builder = new StringBuilder();
 
         for (T element: list) {
-            builder.append(element.getClass().getName() + ": " + element + "\n");
+            builder.append(element.getClass().getName()).append(": ").append(element).append("\n");
         }
 
         return builder.toString();
