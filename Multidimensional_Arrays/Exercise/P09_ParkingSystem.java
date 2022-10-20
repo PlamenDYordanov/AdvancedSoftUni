@@ -58,8 +58,6 @@ public class P09_ParkingSystem {
                 hasItSpace = false;
             }
         }
-        // }
-
     }
 
 
