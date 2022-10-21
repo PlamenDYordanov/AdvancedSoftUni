@@ -127,6 +127,7 @@ public class P10_RadioactiveMutant {
         int nextCol = playerCol + setCol;
         if (isInBound(field, nextRow, nextCol)) {
             if (field[nextRow][nextCol] == 'B') {
+                field[playerRow][playerCol] = '.';
                 isFailed = true;
 
             } else {
