@@ -30,7 +30,7 @@ public class P01_EnergyDrink {
             int currentEnergyDrink = energyDrinkQueue.poll();
 
             int multiply = currentCaffeine * currentEnergyDrink;
-            if (multiply <= 300 && stamantCaffeine + multiply <= 300) {
+            if (stamantCaffeine + multiply <= 300) {
                 stamantCaffeine += multiply;
 
             } else {
