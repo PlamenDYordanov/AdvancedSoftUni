@@ -99,7 +99,6 @@ public class P02_Racing {
             }
             return;
         }
-        track[myRow][myCol] = '.';
         track[nextRow][nextCol] = 'C';
         myRow = nextRow;
         myCol = nextCol;
