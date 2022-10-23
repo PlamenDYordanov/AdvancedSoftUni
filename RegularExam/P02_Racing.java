@@ -52,10 +52,9 @@ public class P02_Racing {
                     movePlayer(track, 0, +1);
                     break;
             }
-
-
             command = scanner.nextLine();
         }
+
         if (command.equals("End")) {
             System.out.printf("Racing car %s DNF.%n", racingNumber);
         }

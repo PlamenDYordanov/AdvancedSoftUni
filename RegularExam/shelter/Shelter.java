@@ -38,12 +38,9 @@ public class Shelter {
 
     public String getStatistics() {
         StringBuilder sb = new StringBuilder("The Advanced.RegularExam.shelter has the following animals:");
-
         for (Animal curAnimal : data) {
             sb.append("\n");
-            sb.append(curAnimal.getName());
-            sb.append(" ");
-            sb.append(curAnimal.getCaretaker());
+            sb.append(curAnimal.getName()).append(sb.append(" ")).append(sb.append(curAnimal.getCaretaker()));
         }
         return sb.toString();
     }

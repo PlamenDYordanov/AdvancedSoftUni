@@ -43,7 +43,9 @@ public class ListyIterator implements Iterable<String> {
 
     @Override
     public void forEach(Consumer<? super String> action) {
-        list.forEach(action::accept);
+        for (String s : list) {
+            action.accept(s);
+        }
     }
 
     public void PrintElement() {

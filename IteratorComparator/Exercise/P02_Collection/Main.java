@@ -19,7 +19,6 @@ public class Main {
 
             switch (input){
                 case "Move":
-
                         System.out.println(listyIterator.iterator().next());
 
                     break;
